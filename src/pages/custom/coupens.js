@@ -10,8 +10,9 @@ import Pagination from '@mui/material/Pagination'
 import Stack from '@mui/material/Stack'
 
 function Coupens() {
-  const [searchCategoryValue, setSearchCategoryValue] = useState('')
-  const [categories, setCategories] = useState([
+  const [searchCategoryValue, setSearchCategoryValue] = useState('');
+  
+  const [categories] = useState([
     {
       heading: 'STANDARD PL',
       number: 99999990,
@@ -116,7 +117,7 @@ function Coupens() {
       <div className='pagination_center_cover'>
         <Stack spacing={2}>
           <Pagination
-            count={Math.ceil(categories.length / 3)}
+            count={(3)}
             hidePrevButton
             hideNextButton
             variant='outlined'
