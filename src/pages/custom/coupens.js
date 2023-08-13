@@ -52,11 +52,11 @@ function Coupens() {
       number: 99999997,
       indication_mail: 'e-mail@email.com'
     }
-  ])
+  ]);
 
   const onSubmit = data => {
-    const { category } = data
-    // Handle your form submission logic here
+    const { category } = data;
+
   }
 
   const {
@@ -116,7 +116,7 @@ function Coupens() {
       <div className='pagination_center_cover'>
         <Stack spacing={2}>
           <Pagination
-            count={Math.ceil(categories.length / 3)} // Calculate the number of pages based on items
+            count={Math.ceil(categories.length / 3)}
             hidePrevButton
             hideNextButton
             variant='outlined'
