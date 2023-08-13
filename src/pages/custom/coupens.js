@@ -72,53 +72,59 @@ function Coupens() {
   }
 
   return (
-    <>
-      <div style={{ display: 'flex', flexDirection: 'column', height : "100%" }}>
-        <div className='content_innter' style={{ flexGrow: '1' }}>
-          <h2>COUPONS</h2>
-          <p style={{ fontSize: '20px' }}>TOTAL: 8</p>
+     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <div className='content_inner' style={{ flexGrow: 1 }}>
+        <h2>COUPONS</h2>
+        <p style={{ fontSize: '20px' }}>TOTAL: {categories.length}</p>
 
-          <form noValidate autoComplete='off'>
-            <FormControl>
-              <InputLabel htmlFor='category' error={Boolean(errors.category)}>
-                Category
-              </InputLabel>
-              <Controller
-                name='category'
-                control={control}
-                render={({ field: { onBlur } }) => (
-                  <OutlinedInput
-                    value={searchCategoryValue}
-                    onBlur={onBlur}
-                    onChange={handleSearchCategoryChange}
-                    id='category'
-                    error={Boolean(errors.category)}
-                    type='text'
-                    label='Category'
-                  />
-                )}
-              />
-              {errors.category && (
-                <FormHelperText sx={{ color: 'error.main' }}>{errors.category.message}</FormHelperText>
+        <form noValidate autoComplete='off'>
+          <FormControl>
+            <InputLabel htmlFor='category' error={Boolean(errors.category)}>
+              Category
+            </InputLabel>
+            <Controller
+              name='category'
+              control={control}
+              render={({ field: { onBlur } }) => (
+                <OutlinedInput
+                  value={searchCategoryValue}
+                  onBlur={onBlur}
+                  onChange={handleSearchCategoryChange}
+                  id='category'
+                  error={Boolean(errors.category)}
+                  type='text'
+                  label='Category'
+                />
               )}
-            </FormControl>
-          </form>
+            />
+            {errors.category && (
+              <FormHelperText sx={{ color: 'error.main' }}>
+                {errors.category.message}
+              </FormHelperText>
+            )}
+          </FormControl>
+        </form>
 
-          <div className='cards'>
-            <Grid container spacing={2}>
-              {categories.map((category, key) => (
-                <CategoryCard key={key} category={category} />
-              ))}
-            </Grid>
-          </div>
+        <div className='cards'>
+          <Grid container spacing={2}>
+            {categories.map((category, key) => (
+              <CategoryCard key={key} category={category} />
+            ))}
+          </Grid>
         </div>
-        <div className='pagination_center_cover'>
+      </div>
+      <div className='pagination_center_cover'>
         <Stack spacing={2}>
-          <Pagination count={3} hidePrevButton hideNextButton variant='outlined' shape='rounded' />
+          <Pagination
+            count={Math.ceil(categories.length / 3)} // Calculate the number of pages based on items
+            hidePrevButton
+            hideNextButton
+            variant='outlined'
+            shape='rounded'
+          />
         </Stack>
       </div>
-      </div>
-    </>
+    </div>
   )
 }
 
