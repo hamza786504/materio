@@ -1,0 +1,77 @@
+html,
+body {
+  min-height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+code {
+  font-family: 'Inter', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  padding: 0.1rem 0.4rem;
+  font-size: 90%;
+  color: #d400ff;
+  border-radius: 0.1335rem;
+}
+code:not([class*='language-']):before,
+code:not([class*='language-']):after {
+  content: '`';
+}
+code[class*='language-'] {
+  padding: 0;
+}
+
+.MuiGrid-container .card{
+  background-color: #00357d;
+  color: white;
+  border-radius: 7px;
+  height: 100%;
+  padding: 20px 25px !important;
+}
+.MuiGrid-container .MuiGrid-item:first-child .card{
+  background-color: #000d2f;
+}
+.cards {
+  margin: 30px 0;
+}
+.cards .MuiGrid-container{
+  align-items: stretch;
+}
+.card .indication{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card h4{
+  margin: 0;
+}
+.card .number{
+  margin: 10 auto;
+}
+.card .indication span:nth-child(2){
+  font-size: 12px;
+}
+.pagination_center_cover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination_center_cover ul li button{
+  background-color: transparent;
+  border: 1px solid #000d2f;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000d2f;
+  outline: none;
+  border-radius: none;
+  font-size: 20px;
+}
+.pagination_center_cover ul li button.css-1sqjbgc-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+  background-color: transparent;
+}
