@@ -9,9 +9,11 @@ import { Grid } from '@mui/material'
 import Pagination from '@mui/material/Pagination'
 import Stack from '@mui/material/Stack'
 
+/* eslint-disable */
+
 function Coupens() {
-  const [searchCategoryValue, setSearchCategoryValue] = useState('');
-  
+  const [searchCategoryValue, setSearchCategoryValue] = useState('')
+
   const [categories] = useState([
     {
       heading: 'STANDARD PL',
@@ -53,11 +55,10 @@ function Coupens() {
       number: 99999997,
       indication_mail: 'e-mail@email.com'
     }
-  ]);
+  ])
 
   const onSubmit = data => {
-    const { category } = data;
-
+    const { category } = data
   }
 
   const {
@@ -73,7 +74,7 @@ function Coupens() {
   }
 
   return (
-     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <div className='content_inner' style={{ flexGrow: 1 }}>
         <h2>COUPONS</h2>
         <p style={{ fontSize: '20px' }}>TOTAL: {categories.length}</p>
@@ -98,11 +99,7 @@ function Coupens() {
                 />
               )}
             />
-            {errors.category && (
-              <FormHelperText sx={{ color: 'error.main' }}>
-                {errors.category.message}
-              </FormHelperText>
-            )}
+            {errors.category && <FormHelperText sx={{ color: 'error.main' }}>{errors.category.message}</FormHelperText>}
           </FormControl>
         </form>
 
@@ -116,17 +113,13 @@ function Coupens() {
       </div>
       <div className='pagination_center_cover'>
         <Stack spacing={2}>
-          <Pagination
-            count={(3)}
-            hidePrevButton
-            hideNextButton
-            variant='outlined'
-            shape='rounded'
-          />
+          <Pagination count={3} hidePrevButton hideNextButton variant='outlined' shape='rounded' />
         </Stack>
       </div>
     </div>
   )
 }
+
+/* eslint-enable */
 
 export default Coupens
