@@ -122,4 +122,4 @@ function Coupens() {
 
 /* eslint-enable */
 
-export default Coupens
+export default Coupens;
