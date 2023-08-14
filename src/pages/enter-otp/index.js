@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Card, Typography, Button, Link } from '@mui/material'
 
+/* eslint-disable */
+
 const OTPInputGroup = () => {
   const [inputValues, setInputValues] = useState({
     input1: '',
@@ -193,3 +195,5 @@ const OTPInput = ({ id, previousId, nextId, value, onValueChange, handleSubmit }
 }
 
 export default OTPInputGroup
+
+/* eslint-enable */
