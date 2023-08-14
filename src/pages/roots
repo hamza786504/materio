@@ -1,0 +1,7 @@
+http://localhost:3000/updatepassword/
+http://localhost:3000/recover/
+http://localhost:3000/register/
+http://localhost:3000/forgot-password/
+http://localhost:3000/otpInputs/
+http://localhost:3000/user/
+http://localhost:3000/login/

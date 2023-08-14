@@ -2,7 +2,89 @@ html,
 body {
   min-height: 100%;
 }
+.content_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* otpInputs.css */
 
+.digitGroup {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.digitGroup input {
+  outline: 0 !important;
+  user-select: none !important;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  font-weight: bold !important;
+  border-radius: 5px;
+  border: 1px solid #887f7f;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #000;
+  margin: 0;
+}
+
+.digitGroup input:focus {
+  border: 2px solid #887f7f !important;
+}
+
+.digitGroup input:active {
+  border: 2px solid #887f7fdd !important;
+}
+
+.digitGroup .splitter {
+  padding: 5px 0;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  margin: 0;
+}
+
+.prompt {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.formSection {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #ddd;
+  padding: 20px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .digitGroup {
+    gap: 5px !important;
+  }
+  .digitGroup input {
+    width: 40px !important;
+  }
+  .digitGroup .splitter {
+    font-size: 25px !important;
+  }
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 #__next {
   height: 100%;
 }
@@ -22,6 +104,55 @@ code:not([class*='language-']):after {
 code[class*='language-'] {
   padding: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html,
+body {
+  min-height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+code {
+  font-family: 'Inter', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  padding: 0.1rem 0.4rem;
+  font-size: 90%;
+  color: #d400ff;
+  border-radius: 0.1335rem;
+}
+code:not([class*='language-']):before,
+code:not([class*='language-']):after {
+  content: '`';
+}
+code[class*='language-'] {
+  padding: 0;
+}
+
+
 
 .MuiGrid-container .card{
   background-color: #00357d;
@@ -74,4 +205,21 @@ code[class*='language-'] {
 }
 .pagination_center_cover ul li button.css-1sqjbgc-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
   background-color: transparent;
+}
+.userform_cover{
+  max-width: 500px;
+  text-align: center;
+  margin: auto;
+}
+.userform_cover .MuiFormControl-root.css-1nrlq1o-MuiFormControl-root{
+  width: 100%;
+}
+.form_btn{
+  background-color: #081f3f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  max-width: 200px;
+  padding: 16px 30px;
+  width: 100%;
 }
