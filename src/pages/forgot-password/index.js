@@ -85,6 +85,7 @@ const ForgotPassword = () => {
     skin === 'bordered' ? 'auth-v2-forgot-password-illustration-bordered' : 'auth-v2-forgot-password-illustration'
 
   return (
+    
     // <Box className='content-right'>
     //   {!hidden ? (
     //     <Box sx={{ flex: 1, display: 'flex', position: 'relative', alignItems: 'center', justifyContent: 'center' }}>
